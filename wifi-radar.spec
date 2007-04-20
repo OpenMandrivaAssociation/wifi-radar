@@ -52,15 +52,17 @@ install -m 644 %{SOURCE1} -D $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
 install -m 644 %{SOURCE2} -D $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
 install -m 644 %{SOURCE3} -D $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat <<EOF  > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): \
-	command="%{name}" \
-	icon="%{name}.png" \
-	needs="x11" \
-	title="WIFI radar" \
-	longtitle="Simple wireless network manager" \
-	section="System/Configuration/Networking"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
+cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
+[Desktop Entry]
+Encoding=UTF-8
+Name=WIFI radar
+Comment=Simple wireless network manager
+Exec=%{name}
+Icon=%{name}
+Terminal=false
+Type=Application
+Categories=X-MandrivaLinux-System-Configuration-Networking;Settings;Network;
 EOF
 
 install -d -m 755 $RPM_BUILD_ROOT%{_sysconfdir}/security/console.apps/
@@ -96,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGE.LOG README README.WPA-Mini-HOWTO.txt TODO
 %{_bindir}/%{name}
 %{_sbindir}/%{name}
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
 %{_miconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
