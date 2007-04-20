@@ -1,7 +1,6 @@
 %define	name	wifi-radar
-%define	version	1.9.4
-%define	rel	1
-%define	release	%mkrel %{rel}
+%define	version	1.9.8
+%define	release	%mkrel 1
 
 Summary:	Utility for managing WiFi profiles
 Name:		%{name}
@@ -94,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS README INSTALL TODO WHISHLIST
+%doc CHANGE.LOG README README.WPA-Mini-HOWTO.txt TODO
 %{_bindir}/%{name}
 %{_sbindir}/%{name}
 %{_menudir}/%{name}
