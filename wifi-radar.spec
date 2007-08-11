@@ -1,6 +1,6 @@
 %define	name	wifi-radar
 %define	version	1.9.8
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 Summary:	Utility for managing WiFi profiles
 Name:		%{name}
@@ -77,7 +77,7 @@ cat > $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/%{name} <<EOF
 #%PAM-1.0
 auth       sufficient   pam_rootok.so
 auth       sufficient   pam_timestamp.so
-auth       required     pam_stack.so service=system-auth
+auth       include      system-auth
 session    required     pam_permit.so
 session    optional     pam_xauth.so
 session    optional     pam_timestamp.so
