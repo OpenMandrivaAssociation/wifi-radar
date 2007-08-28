@@ -55,7 +55,6 @@ install -m 644 %{SOURCE3} -D $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=WIFI radar
 Comment=Simple wireless network manager
 Exec=%{name}
