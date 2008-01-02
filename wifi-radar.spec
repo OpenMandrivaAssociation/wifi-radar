@@ -13,6 +13,7 @@ Source3:	48x%{name}.png
 License:	GPL
 Group:		Networking/Other
 Url:		http://wifi-radar.systemimager.org/
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	pygtk2.0
 Requires:	dhcpcd
 Requires:	usermode-consoleonly
