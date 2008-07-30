@@ -1,6 +1,6 @@
 %define	name	wifi-radar
 %define	version	1.9.8
-%define	release	%mkrel 2
+%define	release	%mkrel 4
 
 Summary:	Utility for managing WiFi profiles
 Name:		%{name}
