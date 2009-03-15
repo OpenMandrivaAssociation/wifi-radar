@@ -1,6 +1,6 @@
 %define	name	wifi-radar
-%define	version	1.9.8
-%define	release	%mkrel 5
+%define	version	1.9.9
+%define	release	%mkrel 1
 
 Summary:	Utility for managing WiFi profiles
 Name:		%{name}
@@ -34,7 +34,7 @@ perl -pi -e 's!^CONF_FILE\s*=.*!CONF_FILE = "%{_sysconfdir}/%{name}.conf"!' %{na
 %build
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %buildroot
 
 install -D -m 755 %{name} $RPM_BUILD_ROOT%{_sbindir}/%{name}
 install -d -m 755 $RPM_BUILD_ROOT%{_bindir}/
@@ -84,7 +84,7 @@ account    required     pam_permit.so
 EOF
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %buildroot
 
 %if %mdkversion < 200900
 %post
