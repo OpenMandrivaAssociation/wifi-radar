@@ -111,3 +111,61 @@ rm -rf %buildroot
 %{_mandir}/man1/%{name}.1*
 %{_mandir}/man5/%{name}.conf.5*
 
+
+
+%changelog
+* Sun Sep 20 2009 Thierry Vignaud <tvignaud@mandriva.com> 1.9.9-2mdv2010.0
++ Revision: 445780
+- rebuild
+
+* Sun Mar 15 2009 Funda Wang <fundawang@mandriva.org> 1.9.9-1mdv2009.1
++ Revision: 355190
+- New version 1.9.9
+
+* Sun Aug 03 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.9.8-5mdv2009.0
++ Revision: 261983
+- rebuild
+
+* Wed Jul 30 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.9.8-4mdv2009.0
++ Revision: 255987
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Thu Jan 03 2008 Olivier Blin <oblin@mandriva.com> 1.9.8-2mdv2008.1
++ Revision: 140932
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+    - kill desktop-file-validate's 'warning: key "Encoding" in group "Desktop Entry" is deprecated'
+
+* Sat Aug 11 2007 Olivier Blin <oblin@mandriva.com> 1.9.8-2mdv2008.0
++ Revision: 61956
+- do not use pam_stack anymore (#31659)
+
+* Fri Apr 20 2007 Olivier Blin <oblin@mandriva.com> 1.9.8-1mdv2008.0
++ Revision: 16099
+- XDG menu
+- update url
+- 1.9.8
+
+
+* Mon Jul 25 2005 Olivier Blin <oblin@mandriva.com> 1.9.4-1mdk
+- 1.9.4
+- package man pages
+- add menu and icons (from Nicolas Brouard)
+
+* Wed May 04 2005 Olivier Blin <oblin@mandriva.com> 1.9.3-3mdk
+- ship config file
+
+* Wed May 04 2005 Per Øyvind Karlsen <pkarlsen@mandriva.com> 1.9.3-2mdk
+- packages is noarch
+- mark conf files as %%config
+- %%mkrel
+- cosmetics
+
+* Wed Apr 27 2005 Olivier Blin <oblin@mandriva.com> 1.9.3-1mdk
+- initial release
+
