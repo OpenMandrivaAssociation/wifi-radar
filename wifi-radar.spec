@@ -1,19 +1,15 @@
-%define	name	wifi-radar
-%define	version	1.9.9
-%define release	3
-
 Summary:	Utility for managing WiFi profiles
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Source0:	http://wifi-radar.systemimager.org/pub/%{name}-%{version}.tar.bz2
+Name:		wifi-radar
+Version:	2.0.s09
+Release:	1
+Source0:	https://wifi-radar.tuxfamily.org/pub/%{name}-%{version}.tar.bz2
 Source1:	16x%{name}.png
 Source2:	32x%{name}.png
 Source3:	48x%{name}.png
 License:	GPL
 Group:		Networking/Other
 Url:		http://wifi-radar.systemimager.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+
 Requires:	pygtk2.0
 Requires:	dhcpcd
 Requires:	usermode-consoleonly
